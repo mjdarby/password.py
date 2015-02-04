@@ -32,7 +32,7 @@ def pickRandomTypeableCharacters(numberOfCharacters, unique):
     returns as a list"""
     allTypeableAscii = [chr(x) for x in range(32, 127)]
     allTypeableAscii.remove('`') # These make everything horrible
-    allTypeableAscii.remove('\'')
+    allTypeableAscii.remove('\'') # These too, go away!
     if unique:
         return sample(allTypeableAscii, numberOfCharacters)
     else:
@@ -46,7 +46,7 @@ def generateLayout():
     return [layout, [str(": ".join(x)) for x in list(zipped)]]
 
 def generateBasePhrase():
-    """Generates an eight character base phrase, guarantee at leat one digit"""
+    """Generates an eight character base phrase, guarantee at least one digit"""
     containsDigit = False
     while not containsDigit:
         basePhrase = "".join(pickRandomTypeableCharacters(8, False))
@@ -60,10 +60,12 @@ def generateNewValues():
     yourLayout = "\n".join(layout[1])
     yourBasePhrase = generateBasePhrase()
 
-    string = "Layout: {}\nBase phrase: {}\nKeep these safe and don't lose them!".format(layoutString,
+    string = "Layout: QWERTYUIOPASDFGHJKLZXCVBNM\n        {}\nBase phrase: {}\nKeep these safe and don't lose them!".format(layoutString,
                                                                                            yourBasePhrase)
-    string2 = "Use your layout like this: ./main.py '{}' '{}' <secret> <sitename>".format(layoutString,
-                                                                                          yourBasePhrase)
+    progName = sys.argv[0]
+    string2 = "Use your layout like this: {} '{}' '{}' <secret> <sitename>".format(progName,
+                                                                                   layoutString,
+                                                                                   yourBasePhrase)
     print(string)
     print(string2)
 
