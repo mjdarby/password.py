@@ -39,6 +39,7 @@ in order to produce the password for that service.
 
 Example usage
 =============
+
     > ./password.py
     Layout: QWERTYUIOPASDFGHJKLZXCVBNM
             8:<blw%zxOtn*4/Z@# iT"geKo
@@ -56,8 +57,11 @@ The layout returned is a map between the characters on the keyboard and the
 characters in the layout.
 
 For instance, if the layout is
+
     8:<blw%zxOtn*4/Z@# iT"geKo
+
 then the mapping will look like
+
     QWERTYUIOPASDFGHJKLZXCVBNM
     8:<blw%zxOtn*4/Z@# iT"geKo
 
@@ -71,6 +75,7 @@ When you design your passwords, think up a common secret word that will be used
 across all passwords.
 If this word is 'moteki', and your base phrase is 'ek 6NUmU', then all your
 passwords will begin with
+
     ek 6NUmUoxl<#z
 
 Then the end of the password is the name of the site or service you're
@@ -78,6 +83,7 @@ generating the password for. For example, if generating a password for
 www.shazbot.co.uk, the site name is 'shazbot'. You suffix the mapped version
 of the site name to the prefix password. 'shazbot' remapped under our layout
 reads as 'nZtiexl', so our final password for www.shazbot.co.uk will read as
+
     ek 6NUmUoxl<#znZtiexl
 
 For the lazy and those who live dangerously
