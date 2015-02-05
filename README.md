@@ -80,11 +80,11 @@ passwords will begin with
 
 Then the end of the password is the name of the site or service you're
 generating the password for. For example, if generating a password for
-www.shazbot.co.uk, the site name is 'shazbot'. You suffix the mapped version
-of the site name to the prefix password. 'shazbot' remapped under our layout
-reads as 'nZtiexl', so our final password for www.shazbot.co.uk will read as
+www.mjdarby.net, the site name is 'mjdarby'. You suffix the mapped version
+of the site name to the prefix password. 'mjdarby' remapped under our layout
+reads as 'o@*tbew', so our final password for www.mjdarby.net will read as
 
-    ek 6NUmUoxl<#znZtiexl
+    ek 6NUmUoxl<#zo@*tbew
 
 For the lazy and those who live dangerously
 ===========================================
@@ -92,8 +92,8 @@ Supposing you don't want to go through the tedious business of doing this
 character mapping for the secret and site name yourself, password.py will
 do this for you.
 
-    > /password.py '8:<blw%zxOtn*4/Z@# iT"geKo' 'ek 6NUmU' moteki shazbot
-    Your password is: ek 6NUmUoxl<#znZtiexl
+    > ./password.py '8:<blw%zxOtn*4/Z@# iT"geKo' 'ek 6NUmU' moteki mjdarby
+    Your password is: ek 6NUmUoxl<#zo@*tbew
 
 Provide password.py the generated mapping, base phrase, your secret and site
 name and it will produce the password for you. Not super recommended, but
